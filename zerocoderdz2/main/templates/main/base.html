@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,16 +10,19 @@
 <body>
 
     <!-- Включаем меню -->
-    {% include 'menu.html' %}
+    {% include 'main/menu.html' %}
 
     <div class="container mt-4">
+
+                <img src="{% static 'main/img/cat.png' %}" alt="Миленький котёнок" class="img-fluid rounded-circle mb-2" width="150px">
+
         {% block content %}
         <!-- Контент страниц будет здесь -->
         {% endblock %}
     </div>
 
     <!-- Включаем подвал -->
-    {% include 'footer.html' %}
+    {% include 'main/footer.html' %}
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
